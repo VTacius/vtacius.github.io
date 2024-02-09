@@ -1,0 +1,27 @@
+---
+title: Uso básico de mitmproxy
+comments: true
+tags:
+    - herramientas
+---
+
+## Instalación
+Lo estoy usando desde Debian, y esta en los repositorios, así que bastó con
+```bash
+apt install mitmproxy
+```
+
+Para correrlo, basta con usar el comando `mitmproxy`, pero solo escucha en `localhost`, lo cual puede cambiarse usando la opción `--list-host`. 
+
+También puede especificarse el puerto con `-p`, lo cual es útil si va a usarse varias instancias
+```bash
+mitmproxy --listen-host 0.0.0.0 -p 8080
+```
+
+Al ejecutarse, es probable que se presente una ventana vacía. Después de haber configurado el navegador para que lo use como proxy y se configure el certificado, la ventana se verá como la siguiente:
+
+![Pantalla inicial de mitmproxy]({{ site.url }}{{ site.baseurl }}/assets/images/Captura de pantalla_2024-02-09_15-33-17.png)
+
+Al hacer click (La aplicación es así de intuitiva) en alguna de las peticiones listadas, podemos ver más información de ella:
+
+![Detalles de petición]({{ site.url }}{{ site.baseurl }}/assets/images/Captura de pantalla_2024-02-09_15-33-53.png)
