@@ -11,9 +11,9 @@ Lo estoy usando desde Debian, y esta en los repositorios, así que bastó con
 apt install mitmproxy
 ```
 
-Para correrlo, basta con usar el comando `mitmproxy`, pero solo escucha en `localhost`, lo cual puede cambiarse usando la opción `--list-host`. 
+Para correrlo, basta con usar el comando `mitmproxy`, pero de esta forma, la instancia sólo escucha en `localhost`, lo cual puede cambiarse usando la opción `--listen-host`. 
 
-También puede especificarse el puerto con `-p`, lo cual es útil si va a usarse varias instancias
+También puede especificarse el puerto con `-p`, lo cual es útil si va a usarse varias instancias. Por defecto, la instancia corre en el puerto `8080`
 ```bash
 mitmproxy --listen-host 0.0.0.0 -p 8080
 ```

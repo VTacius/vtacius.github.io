@@ -25,7 +25,7 @@ masthead_title           : "Blog" # overrides the website title displayed in the
 words_per_minute         : 120
 comments:
   giscus:
-    repo_id              : vtacius/blog 
+    repo_id              : R_kgDOLJ_YMQ 
     category_name        : General
     category_id          : DIC_kwDOLJ_YMc4Cc2c4 
     discussion_term      : title 
