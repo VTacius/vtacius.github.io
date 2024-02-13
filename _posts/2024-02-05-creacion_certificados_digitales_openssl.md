@@ -1,6 +1,5 @@
 ---
 title: Creación de certificados digitales con OpenSSL
-comments: true
 tags:
     - configuraciones
 ---

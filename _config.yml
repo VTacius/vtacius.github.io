@@ -7,7 +7,7 @@
 
 remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
+github                   : [metadata]
 # Site Settings
 locale                   : "es-SV"
 title                    : "Otro intento de Blog"
@@ -17,13 +17,14 @@ name                     : "Alexander Ortíz"
 description              : "Pues nada, un blog de nombre Blog"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/blog/"
-repository               : vtacius/blog
+repository               : "vtacius/blog"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Blog" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 120
 comments:
+  provider: "giscus"
   giscus:
     repo_id              : R_kgDOLJ_YMQ 
     category_name        : General
@@ -230,6 +231,8 @@ defaults:
       read_time: true
       share: true
       related: true
+      comments: true
+      toc: true
   # _pages
   - scope:
       path: "_pages"

@@ -1,9 +1,10 @@
 ---
 title: Uso básico de mitmproxy
-comments: true
 tags:
     - herramientas
 ---
+## Contexto
+`mitmproxy` es una herramienta para crear un proxy MITM. Allí donde el código no este disponible o sea muy confuso, por ejemplo, puede usarse para examinar el uso que tal aplicación haga de una API.
 
 ## Instalación
 Lo estoy usando desde Debian, y esta en los repositorios, así que bastó con
@@ -11,6 +12,7 @@ Lo estoy usando desde Debian, y esta en los repositorios, así que bastó con
 apt install mitmproxy
 ```
 
+## Uso
 Para correrlo, basta con usar el comando `mitmproxy`, pero de esta forma, la instancia sólo escucha en `localhost`, lo cual puede cambiarse usando la opción `--listen-host`. 
 
 También puede especificarse el puerto con `-p`, lo cual es útil si va a usarse varias instancias. Por defecto, la instancia corre en el puerto `8080`

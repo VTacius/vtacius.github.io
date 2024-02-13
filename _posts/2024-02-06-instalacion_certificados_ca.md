@@ -1,7 +1,5 @@
 ---
 title: Instalación de certificados CA
-comments: true
-toc: true
 tags:
     - configuraciones
 ---
