@@ -6,6 +6,8 @@ main:
     url: /year-archive/
   - title: "Portafolio"
     url: /portfolio/
+  - title: "TODO's"
+    url: /todos/
   - title: "Sitemap"
     url: /sitemap/
 

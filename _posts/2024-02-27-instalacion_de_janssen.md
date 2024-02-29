@@ -43,3 +43,7 @@ Para comprobar la instalación, hay un par de formas, todas involucran hacer pet
 ```bash
 curl -s -k https://$(hostname -f)/jans-auth/sys/health-check | jq
 ```
+
+## Fuentes
+* [jq documentation](https://devdocs.io/jq/)
+* [Overview - Janssen Documentation](https://docs.jans.io/v1.0.22/admin/install/vm-install/)
