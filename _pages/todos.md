@@ -19,6 +19,7 @@ toc: true
 
 ## Frontend
 * https://docs.cotter.app/
+* https://alpinejs.dev/ Esta cosa se me hace demasiado simpática como para no usarla en alguna cosa
 
 ## Ingeniería Social
 * https://github.com/trustedsec/social-engineer-toolkit - SET, la verdad se ve bastante completo
@@ -41,3 +42,7 @@ toc: true
 * https://www.monperrus.net/martin/7-things-to-do-with-your-TPM-on-Linux
 * https://next.redhat.com/2021/05/13/what-can-you-do-with-a-tpm/
 
+## Big Data
+* https://www.janes.com/ (Sigo sin tener una idea clara de que hace, pero se me hace demasiado interesante)
+* https://linkis.apache.org/ Middleware para integración. Uno de esos proyectos de Apache que prometen mucho, pero que solo parecen ser un desarrollo específico de alguna compañía que lo publica para ver si alguien cae y le ayuda con el código
+* https://inlong.apache.org/ Framework para integración. Más o menos de la misma idea que linkis.
