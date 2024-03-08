@@ -20,18 +20,31 @@ toc: true
 ## Frontend
 * https://docs.cotter.app/
 * https://alpinejs.dev/ Esta cosa se me hace demasiado simpática como para no usarla en alguna cosa
+* https://vega.github.io/vega-lite/ Hace gráficas algo bonitas
 
 ## Ingeniería Social
 * https://github.com/trustedsec/social-engineer-toolkit - SET, la verdad se ve bastante completo
 
 ## Sec-tools
+* https://github.com/juice-shop/juice-shop - Una aplicación para pruebas
+* https://github.com/RustScan/RustScan - Ya puestos a probar, probá esté
+* https://github.com/projectdiscovery/nuclei - Definitivamente tenés que probar esto
+* https://httptoolkit.com/ - Me pareció que incluso el primer lugar en prioridad es poco
+* https://smallstep.com/docs/step-cli/basic-crypto-operations/#description - La cambié al inicio porque en verdad me pareció una navaja suiza muy interesante
 * Trabajar en una guía para usar con mitmproxy con los plugins que usaste la vez anterior
+* https://github.com/projectdiscovery/nuclei
+* https://github.com/spyboy-productions/CloakQuest3r - Dice ser capaz de *"Descubrir la verdadera IP de sitios web tras CloudFlare"*
+* https://github.com/OJ/gobuster 
+* https://github.com/ffuf/ffuf - Es un fuzzer, pero escrito en Go, así que desde ya lo considero genial
+* https://github.com/lc/gau - También escrito en Go, también una especie de fuzzer, pero se basa en contenido obtenido de terceros
+* https://github.com/httptoolkit/frida-interception-and-unpinning - Mitmt para android, me llama mucho la atención para probar
 
 ## Seguridad Informática
 * Estoy creando un proyecto, en PHP, que sirva como modelo de buenas prácticas en la creación de API's
 * Estoy creando un proyecto, en JS, que sirva como objetivo de pruebas de seguridad y herramientas
 * Por ahora, el único proyecto es https://github.com/vtacius/viuda, que ya puede hacer combinaciones posibles de rutas y las peticiona con varios verbos. Es un gran ahorro de cara a examinar API's de forma exhaustiva
 * Debo empezar otro proyecto para trabajar sobre los JWT, por ahora la primera fase del proyecto en JS será para trabajar con este otro
+* Tenés que crear una herramienta que pueda sintetizar esto: https://jwt.io/ y http://jwtbuilder.jamiekurtz.com/
 
 ### SSO
 * https://github.com/casdoor/casdoor - Se declara un IAM completo, al mismo nivel que KeyCloak pues
