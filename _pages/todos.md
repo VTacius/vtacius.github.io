@@ -2,6 +2,7 @@
 title: TODO's
 permalink: /todos/
 date: 2024-02-29T15:38:52+06:00
+toc: true
 ---
 
 ## Almacenamiento
@@ -45,11 +46,14 @@ Deberías probarlas, sobre todo los que están relacionados con AWS S3
 * [Xtreme Vulnerable Web Application (XVWA)](https://github.com/s4n7h0/xvwa)
 * [OWASP Mutillidae II](https://github.com/webpwnized/mutillidae)
 * [OWASP Security Shepherd](https://github.com/OWASP/SecurityShepherd)
+* [owasp-bricks](https://github.com/itsos4devs/owasp-bricks)
 
 ### Herramientas
-* https://github.com/projectdiscovery/nuclei - Definitivamente tenés que probar esto
-* https://httptoolkit.com/ - Me pareció que incluso el primer lugar en prioridad es poco
 * https://smallstep.com/docs/step-cli/basic-crypto-operations/#description - La cambié al inicio porque en verdad me pareció una navaja suiza muy interesante
+* [SSRFmap](https://github.com/swisskyrepo/SSRFmap) - Hecha en python, necesito mucho para empezar a usar uno de estos
+* [SX](https://github.com/v-byte-cpu/sx) - Un scanner de red, otro supuesto a reemplazar nmap, con más de dos años sin actualizarse
+* [Arjun](https://github.com/s0md3v/Arjun) - Lo empecé a usar un poco, pero no ví nada por defecto
+* [dalfox](https://github.com/hahwul/dalfox) - A powerful open-source XSS scanner and utility focused on automation
 * https://github.com/spyboy-productions/CloakQuest3r - Dice ser capaz de *"Descubrir la verdadera IP de sitios web tras CloudFlare"*
 * https://github.com/OJ/gobuster 
 * https://github.com/ffuf/ffuf - Es un fuzzer, pero escrito en Go, así que desde ya lo considero genial
@@ -74,7 +78,7 @@ Deberías probarlas, sobre todo los que están relacionados con AWS S3
 * [Run your own OAuth2 Server](https://www.ory.sh/run-oauth2-server-open-source-api-security/) - Usa [Ory/Hydra](https://github.com/ory/hydra) y parece ser una buena opción
 
 ## TPM
-* Sigo creyendo que esto solo tiene sentido como un segundo factor de autenticación
+* Sigo creyendo que esto solo tiene sentido como un segundo factor de autenticación. Literalmente, es como dejar un auto con la llave adentro
 * https://www.monperrus.net/martin/7-things-to-do-with-your-TPM-on-Linux
 * https://next.redhat.com/2021/05/13/what-can-you-do-with-a-tpm/
 
