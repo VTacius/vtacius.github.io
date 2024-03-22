@@ -69,6 +69,11 @@ Deberías probarlas, sobre todo los que están relacionados con AWS S3
 
 ### Herramientas
 * https://github.com/noir-cr/noir - Noir is an attack surface detector that identifies endpoints by static analysis.
+* [Hetty](https://hetty.xyz/docs/) - La verdad lo empecé a usar y me encantó (Tiene hasta interceptor, con eso lo digo todo), pero no alcancé a hacer la guía
+* [Caido](https://github.com/caido/caido) - Pero es pago, es el único problema
+* [glorp](https://github.com/denandz/glorp) - Me parece que para ese ya tengo a mitmproxy, pero quién quita y este también sirve de algo
+* [Egyscan](https://github.com/dragonked2/Egyscan) - Es un scan, a ver que onda con el
+* [commix](https://github.com/commixproject/commix) - Otro scan, la verdad siempre vale la pena probarles
 * [SX](https://github.com/v-byte-cpu/sx) - Un scanner de red, otro supuesto a reemplazar nmap, con más de dos años sin actualizarse
 * [Arjun](https://github.com/s0md3v/Arjun) - Lo empecé a usar un poco, pero no ví nada por defecto
 * [dalfox](https://github.com/hahwul/dalfox) - A powerful open-source XSS scanner and utility focused on automation
