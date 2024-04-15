@@ -12,29 +12,20 @@ Estas son un montón de notas sueltas sobre como he ido creando el mío, en alg�
 * Se configura el equipo físico con virtualización mediante KVM
 * Se instala una máquina virtual
 
-## Resolviendo `nl80211: Could not configure driver mode`
-Usando el adaptador USB `Realtek RTL8192EU Wireless LAN 802.11n USB 2.0 Network Adapter` con `hostapd` resulta un problema:
-```
-nl80211: Could not configure driver mode
-```
-Esto es un problema con el driver empaquetado en Debian. La solución ya ha sido dada por el usuario [Mange](https://github.com/Mange/rtl8192eu-linux-driver), y solo tenemos que compilar su versión del driver:
+## Instalación de paquetes  
+### Paquetes que siempre serán necesarios 
 ```bash
-apt update
-apt install git linux-headers-generic build-essential dkms
+apt install curl vim tshark nmap pv tree unzip 
+```
 
-# Eliminamos el driver si ya lo habíamos instalado. Lo más saludable es reiniciar el sistema después de ello
-apt purge firmware-realtek 
+### Virtualización con KVM en Debian sin entorno gráfico
+```bash
+apt --no-install-recommends install qemu-kvm bridge-utils virtinst libvirt-daemon-system qemu-utils
+```
 
-git clone https://github.com/Mange/rtl8192eu-linux-driver
-cd rtl8192eu-linux-driver
-dkms add .
-dkms install rtl8192eu/1.0
-
-echo -e "8192eu\n\nloop" >> /etc/modules
-update-grub
-update-initramfs -u
-reboot
-
+Para usar `OpenVSwith` ([Configuración de OpenVSwitch en Debian Bookworm]({{site.url}}{{site.baseurl}}configuracion_openvswitch_debian/)):
+```bash
+apt install openvswitch-switch
 ```
 
 ## Configuración de interfaz inalámbrica como salida por defecto para el sistema

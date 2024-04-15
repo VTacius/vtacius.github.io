@@ -4,8 +4,8 @@ main:
     url: /about/ 
   - title: "Posts"
     url: /year-archive/
-  - title: "Portafolio"
-    url: /portfolio/
+  - title: "Comandos"
+    url: /comandos/
   - title: "SecTools"
     url: /sectools/
   - title: "TODO's"
