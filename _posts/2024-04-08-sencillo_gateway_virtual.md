@@ -18,7 +18,7 @@ Una vez instalada con el driver adecuado, se configura de la siguiente forma en 
 ```
 auto wlx7898e81f45ef
 iface wlx7898e81f45ef inet static
-    address 10.10.101.1
+    address 10.10.101.1/24
 ```
 
 Y reiniciamos la red
@@ -29,7 +29,6 @@ systemctl restart networking.service
 ### dnsmasq
 La siguiente parece ser una configuración mínima para `Hostapd`. 
 * Pueden desactivarse las opciones de `log-*` si no se requiere observarlos.
-* Se 
 * Se usa `except-interface` y `no-dhcp-interface` para no prestar servicios a la red normal, lo cual es algo deseable para un laboratorio.
 * Se prefiere el uso de un DNS externo, pero hemos señalado el uso de un interno para un dominio en específico
 
@@ -92,6 +91,7 @@ Configuramos en `/etc/default/hostapd` el archivo de configuración a usar:
 ```bash
 sed -i -E 's|#(DAEMON_CONF=")|\1/etc/hostapd/hostapd.conf|g' /etc/default/hostapd
 ```
+
 Una configuración mínima luce así en el archivo de configuración:
 ```bash
 cat << CONF > /etc/hostapd/hostapd.conf
@@ -143,8 +143,13 @@ iptables -t nat -A POSTROUTING -s 10.10.101.0/24 -o enp1s0 -j MASQUERADE
 echo 0
 MAFI
 ```
+Configuramos permisos de ejecución:
+```bash
+chmod u+x /usr/local/sbin/firewall.sh
+```
 
-Configurar el servicio
+Configuramos el servicios mediante `systemd`
+
 ```bash
 cat <<MAFI>/lib/systemd/system/firewall.service
 [Unit]
@@ -160,7 +165,16 @@ ExecStart=/usr/local/sbin/firewall.sh
 WantedBy=multi-user.target
 MAFI
 
+```
+
+Lo activamos:
+
+```bash
+systemctl enable --now firewall.service
+```
+
 Y configuramos el reenvío de paquetes en el sistema, y lo aplicamos:
+
 ```bash
 sed -i -E 's/#(net.ipv4.ip_forward=1)/\1/g' /etc/sysctl.conf
 sysctl -p 
