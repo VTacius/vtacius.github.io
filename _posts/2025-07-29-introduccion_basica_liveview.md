@@ -30,7 +30,7 @@ cd demo
 mix phx.server
 ```
 
-### Primera fase: Rutas apenas funcionales
+## Primera fase: Rutas apenas funcionales
 A ver: Phoenix separa nuestro modulo `Demo` en dos dominios: `Demo` propiamente, donde debe desarrollarse toda la lógica de negocios, y `DemoWeb`, dónde vamos a desarrollar todas las cuestiones sobre la presentación web.
 
 Empezamos por la lógica web: Crearemos el directorio `lib/demo_web/live/`: Si bien el módulo LiveView ya se encuentra por defecto en el proyecto, el directorio designado para guardar sus componentes no se crea por defecto
