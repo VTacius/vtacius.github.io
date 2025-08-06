@@ -3,6 +3,7 @@ title: Configuración básica de NeoVim
 tags:
     - configuraciones
     - desarrollo
+    - neovim
 ---
 
 ## Introducción
