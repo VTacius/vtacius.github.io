@@ -184,7 +184,8 @@ whitelist:
   - jekyll-feed
   - jekyll-include-cache
 
-
+jekyll-feed:
+  disable_in_development: true
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
