@@ -1,6 +1,5 @@
 ---
 date: "2025-07-20T00:00:00Z"
-draft: true
 tags:
 - configuraciones
 - desarrollo
@@ -36,17 +35,19 @@ Si guardamos sin cerrar, podremos ver en nuestra barra este mensaje:
 
 Que será una constante en los siguientes plugins
 
-Además, si reiniciamos `nvim`, veremos que ya no muestra el mensaje de error del final de la guía anterior
+Además, si reiniciamos `nvim`, veremos que ya no muestra el mensaje de error del final de la guía anterior, porque ya tiene un plugin que cargar
 
 ## colorscheme
-Este será un pequeño truco para facilitar, sin complicar en demasía, la configuración de más temas
+Con esto podremos cambiar el tema de forma más sencilla. 
+
+La idea es que podemos configurar la cantidad de temas que querramos, y solo se cargará aquel cuyo nombre coincida con el return del siguiente archivo
 
 ```lua
 -- ~/.config/nvim/lua/config/colorscheme.lua
 
--- return "catppuccin"
 -- return "nordic"
-return "onenord"
+-- return "onenord"
+return "catppuccin"
 ```
 
 ## Temas
@@ -57,21 +58,21 @@ Por ahora solo he probado tres: `catppuccin`, `nord`, `onenord`, los dos último
 -- ~/.config/nvim/lua/config/catppuccin.lua
 
 return {
-  flavour = "latte",      -- Opciones: "latte", "frappe", "macchiato", "mocha"
-  background = {          -- Configuración de fondo para modos claro/oscuro
+  flavour = "frappe",               -- Opciones: "latte", "frappe", "macchiato", "mocha"
+  background = {                    -- Configuración de fondo para modos claro/oscuro
     light = "latte",
     dark = "mocha",
   },
-  transparent_background = false, -- Establecer en `true` si se desea un fondo transparente
-  term_colors = true,             -- Habilita la configuración de colores del terminal
+  transparent_background = false,   -- Establecer en `true` si se desea un fondo transparente
+  term_colors = true,               -- Habilita la configuración de colores del terminal
   compile = {
-    enabled = true,               -- Habilita la compilación del tema para un inicio más rápido
+    enabled = true,                 -- Habilita la compilación del tema para un inicio más rápido
     path = vim.fn.stdpath("cache").. "/catppuccin", -- Ruta de caché para el tema compilado
   },
-  ntegrations = {        -- Integraciones con otros plugins para una tematización cohesiva
-    cmp = true,           -- Integración con blink.cmp
+  ntegrations = {                   -- Integraciones con otros plugins para una tematización cohesiva
+    cmp = true,                     -- Integración con blink.cmp
     aerial = true,
-    treesitter = true,    -- Integración con nvim-treesitter
+    treesitter = true,              -- Integración con nvim-treesitter
     -- Añadir otras integraciones según los plugins instalados
   },
 }
@@ -93,7 +94,6 @@ return {
     end
   end
 }
-
 ```
 
 ### Nordic
@@ -188,8 +188,6 @@ return {
 }
 ```
 
-En este punto se puede reiniciar. y puede verse como el tema `onenord` toma el control de nvim una vez se termina de instalar. Creo que `onenord` es un muy buen tema, para que negarlo. 
+En este punto se puede reiniciar. y puede verse como el tema `catppuccin` toma el control de nvim una vez se termina de instalar
 
-Cambiando en `~/.config/nvim/lua/config/catppuccin.lua` podemos ver como es la versión light de `catppuccin`, o `nordic`, que puede ser lo que se quiera en algunos casos
-
-De igual forma, se pueden seguir agregando temas al gusto.
+La mayor recomendación en este apartado es que el tema, o al menos el background si es posible, coincida con el tema de la terminal que se use

@@ -1,6 +1,5 @@
 ---
 date: "2025-07-21T00:00:00Z"
-draft: true
 tags:
 - configuraciones
 - desarrollo
@@ -9,7 +8,9 @@ title: 'Configurando Neovim: IDE'
 ---
 
 ## Introducción
-Este es lo realmente indispensable en toda configuración de este tipo. Cuesta creer lo importante que es el resaltado de sintaxis hasta que se trabaja sin ella. Y aprovechando, ya que estamos leyendo AST, usando un LSP por cada lenguaje, así además tenemos una revisión temprana del código. `NeoVim` casi como un IDE
+Empieza el punto vertebral para una configuración de este tipo. Cuesta creer lo importante que es el resaltado de sintaxis hasta que se trabaja sin ella. 
+
+Y, aprovechando que tenemos configurado AST, usaremos un LSP pora cada lenguaje, así además tendremos una revisión temprana del código. `NeoVim` casi como un IDE
 
 ## Luasnip
 Es un dependencia de `blink-cmp` que definiremos en su propio archivo:
@@ -27,6 +28,11 @@ return {
 ```
 
 ## Treesitter
+Se recomienda instalar el ejecutable de `tree-sitter` en el sistema, en el caso que vaya a usarse `:TSInstallFromGrammar` 
+```bash
+npm install -g tree-sitter-cli
+```
+
 ```lua
 -- ~/.config/nvim/lua/config/treesitter.lua
 
@@ -87,7 +93,7 @@ compilación terminada.
 
 No pude hallar más referencias que usar `:TSUpdate`, que dicho sea de paso, es la forma de actualizar todos sus parser y la posible solución a la mayoría de problemas (Que realmente son pocos) que puede presentar la herramienta
 
-Si la idea de seguir una guía de configuración lo más sencilla posible, debo admitir que este facilmente podría ser el punto final. Al final, sería como usar un `vim` con un par de superpoderes, pero vim al fin y al cabo.
+Si la idea de seguir una guía de configuración lo más sencilla posible, debo admitir que este facilmente podría ser el punto final. Al final, sería como usar un `vim` con un par de superpoderes, pero `vim` al fin y al cabo.
 
 Pero, es altamente recomendable seguir con al menos el siguiente componente
 
@@ -175,11 +181,10 @@ return {
       "L3MON4D3/LuaSnip",
       "rafamadriz/friendly-snippets",
     },
-    opts = require("config.blink-cmp"),
-    config = function(_, opts)
+    config = function()
       require("luasnip.loaders.from_vscode").lazy_load()
       require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.fn.stdpath("config") .. "/snippets" } })
-      require("blink.cmp").setup(opts)
+      require("blink.cmp").setup()
     end,
   },
 }
@@ -187,7 +192,7 @@ return {
 ```
 
 ## LSP
-La configuración de LSP es el siguiente mejor salto cualitativo que se puede hacer. En este caso, esta compuesto por `mason` y `mason-lspconfig`. Para el caso de `Elixir`, uso `ElixirLS` por medio de `elixir-tools`
+La configuración de LSP es el siguiente mejor salto cualitativo que se puede hacer. Para ello, elegí usar `mason` y `mason-lspconfig`, los cuales parecen suficientes para muchos lenguajes (Una [lista completa puede encontrarse acá](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md)). Para el caso de `Elixir`, uso `ElixirLS` por medio de `elixir-tools`.
 
 ```lua
 -- ~/.config/nvim/lua/config/lsp.lua
@@ -246,9 +251,7 @@ return {
 }
 ```
 
-Una lista de lenguajes disponibles pueden encontrarse en el [enlace](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md)
-
-Es podría ser otro final de la guía de configuración para muchos. Por mi parte, aún necesito del siguiente para mejorar sus capacidades en Elixir 
+Es podría ser otro final de la guía de configuración para muchos, con el cuidado de agregar los lenguajes que se necesiten para su pila de desarrollo. En mi caso, aún necesito del siguiente para mejorar sus capacidades en Elixir 
 
 ## elixir-tools
 ```lua
@@ -296,4 +299,4 @@ return {
 }
 ```
 
-Y con eso, `NeoVim sigue siendo un editor de texto, pero con características de IDE. 
+Y con eso, `NeoVim` sigue siendo un editor de texto, pero con características de IDE. 
